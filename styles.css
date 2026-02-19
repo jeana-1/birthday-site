@@ -1,0 +1,90 @@
+
+body {
+font-family: 'Arial', sans-serif;
+background: #ffe4e1;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+flex-direction: column;
+}
+
+.center {
+text-align: center;
+}
+
+button {
+padding: 10px 20px;
+margin-top: 20px;
+font-size: 18px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+background-color: #ff69b4;
+color: white;
+transition: 0.3s;
+}
+
+button:hover {
+transform: scale(1.1);
+}
+
+input {
+padding: 10px;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+/* Cake */
+.cake {
+position: relative;
+width: 200px;
+margin: 50px auto;
+}
+
+.layer {
+width: 200px;
+height: 50px;
+background: #ff6347;
+border-radius: 10px;
+margin: 0 auto;
+box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.layer1 {
+background: #ff6347;
+}
+
+.layer2 {
+background: #ff4500;
+margin-top: -10px;
+}
+
+.candle {
+width: 10px;
+height: 40px;
+background: #fffacd;
+position: absolute;
+top: -40px;
+left: 95px;
+border-radius: 5px;
+}
+
+.flame {
+width: 15px;
+height: 20px;
+background: radial-gradient(circle, yellow, orange);
+position: absolute;
+top: -20px;
+left: -2px;
+border-radius: 50%;
+animation: flicker 0.5s infinite;
+}
+
+@keyframes flicker {
+0% { transform: translateY(0) scale(1); opacity: 1; }
+50% { transform: translateY(-3px) scale(1.2); opacity: 0.8; }
+100% { transform: translateY(0) scale(1); opacity: 1; }
+}

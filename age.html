@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>How Old?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="center">
+<h2>How old are you turning?</h2>
+<input type="number" id="ageInput" placeholder="Enter your age">
+<button onclick="checkAge()">Submit</button>
+</div>
+
+<script>
+function checkAge() {
+const age = document.getElementById('ageInput').value;
+if(age === "20") {
+alert("Well done! 😂🎂🎉");
+setTimeout(() => {
+const nextBtn = document.createElement('button');
+nextBtn.textContent = "Next";
+nextBtn.onclick = () => window.location.href = 'birthday.html';
+document.body.appendChild(nextBtn);
+}, 3000);
+} else {
+alert("Try again! 😅");
+}
+}
+</script>
+</body>
+</html>
